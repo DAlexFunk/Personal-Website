@@ -1,21 +1,36 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const [activeLink, setActiveLink] = useState("home");
+
   return (
     <nav>
       <ul>
-        <li>
-          <Link to="/" className="homeLink">
+        <li className={activeLink === "home" ? " active" : ""}>
+          <Link
+            to="/"
+            className="homeLink"
+            onClick={() => setActiveLink("home")}
+          >
             Home
           </Link>
         </li>
-        <li>
-          <Link to="projects" className="projectsLink">
+        <li className={activeLink === "projects" ? " active" : ""}>
+          <Link
+            to="projects"
+            className="projectLink"
+            onClick={() => setActiveLink("projects")}
+          >
             Projects
           </Link>
         </li>
-        <li>
-          <Link to="snapshot" className="snapshowLink">
+        <li className={activeLink === "snapshot" ? " active" : ""}>
+          <Link
+            to="snapshot"
+            className="snapshotLink"
+            onClick={() => setActiveLink("snapshot")}
+          >
             Snapshot of Me
           </Link>
         </li>
