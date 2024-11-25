@@ -1,6 +1,5 @@
 {
-  "name": "my-first-react-app",
-  "private": true,
+  "name": "portfolio-website",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
