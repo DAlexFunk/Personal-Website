@@ -10,6 +10,7 @@ body {
 
 /* Nav Bar */
 nav {
+  position: relative;
   background-color: #6247aa;
   height: 75px;
 }
@@ -17,26 +18,31 @@ nav {
 nav ul {
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 nav ul li {
   color: white;
   height: 100%;
-  min-width: 200px;
+  width: 300px;
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-nav ul li.active {
-  background-color: rebeccapurple;
-  /* color: black; */
+  z-index: 1;
 }
 
 li a {
   color: inherit;
   font-size: 24px;
   text-decoration: none;
+}
+
+div.highlight {
+  position: absolute;
+  background-color: #A06CD5;
+  height: 75%;
+  width: clamp(200px, 25%, 400px);
+  border-radius: 25px;
+  transition: left 350ms;
 }

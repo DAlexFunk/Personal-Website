@@ -1,13 +1,29 @@
+import { useMeasure } from "@uidotdev/usehooks";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [activeLink, setActiveLink] = useState("home");
+  const [selfRef, selfDimensions] = useMeasure();
+  const [liRef, liDimensions] = useMeasure();
+
+  let position = "0";
+  switch (activeLink) {
+    case "home":
+      position = `calc(25% - ${0.5 * selfDimensions.width}px - ${0.25 * liDimensions.width}px)`;
+      break;
+    case "projects":
+      position = `calc(50% - ${0.5 * selfDimensions.width}px)`;
+      break;
+    case "snapshot":
+      position = `calc(75% - ${0.5 * selfDimensions.width}px + ${0.25 * liDimensions.width}px)`;
+      break;
+  }
 
   return (
     <nav>
       <ul>
-        <li className={activeLink === "home" ? " active" : ""}>
+        <li className="home" ref={liRef}>
           <Link
             to="/"
             className="homeLink"
@@ -16,7 +32,7 @@ export default function Navbar() {
             Home
           </Link>
         </li>
-        <li className={activeLink === "projects" ? " active" : ""}>
+        <li className="projects">
           <Link
             to="projects"
             className="projectLink"
@@ -25,7 +41,7 @@ export default function Navbar() {
             Projects
           </Link>
         </li>
-        <li className={activeLink === "snapshot" ? " active" : ""}>
+        <li className="snapshot">
           <Link
             to="snapshot"
             className="snapshotLink"
@@ -35,6 +51,14 @@ export default function Navbar() {
           </Link>
         </li>
       </ul>
+      <div
+        className="highlight"
+        style={{
+          left: position,
+          top: `calc(50% - ${0.5 * selfDimensions.height}px)`,
+        }}
+        ref={selfRef}
+      ></div>
     </nav>
   );
 }
