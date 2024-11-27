@@ -1,4 +1,4 @@
-import alexImg from "../assets/alexHero.jpg"
+import alexImg from "../assets/alexHero.jpg";
 
 export default function Home() {
   return (

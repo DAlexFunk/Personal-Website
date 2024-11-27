@@ -40,7 +40,7 @@ li a {
 
 div.highlight {
   position: absolute;
-  background-color: #A06CD5;
+  background-color: #a06cd5;
   height: 75%;
   width: clamp(200px, 25%, 400px);
   border-radius: 25px;
