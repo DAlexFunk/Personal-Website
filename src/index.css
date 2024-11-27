@@ -88,7 +88,7 @@ section.hero div.image img.heroImg {
 
 div.image p.name {
   color: #fdfff7;
-  font-family: "Yellowtail";
+  font-family: "Yellowtail", Cambria, Cochin, Times, serif;
   text-shadow: 2px 2px #0a0f0d;
   font-size: 64px;
   position: absolute;
