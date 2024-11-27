@@ -106,3 +106,28 @@ div.image img.arrow {
     hue-rotate(31deg) brightness(97%) contrast(109%)
     drop-shadow(2px -1px 0px #0a0f0d);
 }
+
+section.introP {
+  background-color: #6247aa;
+  color: #fdfff7;
+  margin-top: 100px;
+  padding: 32px 512px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.introP h2 {
+  font-size: 32px;
+}
+
+.introP p {
+  font-size: 28px;
+  text-align: center;
+}
+
+.introP p a {
+  color: #06BA63;
+}
