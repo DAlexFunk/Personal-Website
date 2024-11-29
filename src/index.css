@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+html {
+  width: 100%;
+}
+
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: #fdfff7;
@@ -111,7 +115,7 @@ section.introP {
   background-color: #6247aa;
   color: #fdfff7;
   margin-top: 100px;
-  padding: 32px 512px;
+  padding: 32px 312px 175px;
 
   display: flex;
   flex-direction: column;
@@ -129,5 +133,81 @@ section.introP {
 }
 
 .introP p a {
-  color: #06BA63;
+  color: #06ba63;
+}
+
+section.projects {
+  display: flex;
+  justify-content: center;
+}
+
+div.projectsContainer {
+  background-color: #fdfff7;
+  width: 80%;
+  padding: 24px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  position: relative;
+  top: -100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+div.projects {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div.project {
+  position: relative;
+  max-width: 300px;
+  min-height: 425px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+div.project img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+div.project#weather img{
+  filter: brightness(40%) sepia(100%) hue-rotate(315deg) saturate(400%);
+}
+
+div.project#shoppingCart img{
+  filter: brightness(40%) sepia(100%) hue-rotate(90deg) saturate(400%);
+}
+
+div.project#calculator img{
+  filter: brightness(40%) sepia(100%) hue-rotate(180deg) saturate(400%);
+}
+
+div.project .text {
+  padding: 5px 10px;
+}
+
+div.project div.buttons {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+div.buttons button {
+  background-color: transparent;
+  height: 48px;
+  width: 48px;
+  margin-left: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+div.project button.repoButton {
+  background-image: url("./assets/github.svg");
+}
+
+div.project button.externalButton {
+  background-image: url("./assets/openInNew.svg");
 }

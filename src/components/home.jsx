@@ -1,5 +1,35 @@
 import alexImg from "../assets/alexHero.jpg";
 import arrow from "../assets/curvedArrow.svg";
+import calculatorImg from "../assets/calculator.png";
+import shoppingCartImg from "../assets/shoppingCart.png";
+import weatherImg from "../assets/weather.png";
+
+const projects = [
+  {
+    repoLink: "https://github.com/DAlexFunk/Odin-Weather-App",
+    externalLink: "https://dalexfunk.github.io/Odin-Weather-App/",
+    img: weatherImg,
+    title: "Weather App",
+    desc: "Weather app project made with HTML/CSS and JavaScript. Makes calls to the Visual Crossing Weather API",
+    id: "weather",
+  },
+  {
+    repoLink: "https://github.com/DAlexFunk/Odin-Shopping-Cart",
+    externalLink: "https://dalexfunk-shopping-cart.netlify.app/",
+    img: shoppingCartImg,
+    title: "Shopping Cart",
+    desc: "Fake shopping cart app made with ReactJS and makes calls to the Fake Store API",
+    id: "shoppingCart",
+  },
+  {
+    repoLink: "https://github.com/DAlexFunk/Odin-Calculator",
+    externalLink: "https://dalexfunk.github.io/Odin-Calculator/",
+    img: calculatorImg,
+    title: "Calculator App",
+    desc: "Simple Calculator app made with JavaScript with an interface in HTML/CSS",
+    id: "calculator",
+  },
+];
 
 export default function Home() {
   return (
@@ -26,6 +56,38 @@ export default function Home() {
           &#41; on YouTube before I even knew what a language was.
         </p>
       </section>
+      <section className="projects">
+        <div className="projectsContainer">
+          <h1>Projects Snapshot</h1>
+          <div className="projects">
+            {projects.map((project) => (
+              <MiniProject project={project} key={projects.indexOf(project)} />
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
+  );
+}
+
+function MiniProject({ project }) {
+  return (
+    <div className="project" id={project.id}>
+      <img src={project.img} />
+      <div className="text">
+        <h3>{project.title}</h3>
+        <p>{project.desc}</p>
+      </div>
+      <div className="buttons">
+        <button
+          className="repoButton"
+          onClick={() => window.open(project.repoLink)}
+        ></button>
+        <button
+          className="externalButton"
+          onClick={() => window.open(project.externalLink)}
+        ></button>
+      </div>
+    </div>
   );
 }
