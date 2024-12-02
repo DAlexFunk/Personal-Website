@@ -15,6 +15,19 @@ body {
   background-color: #fdfff7;
 }
 
+/* Filter Classes for Images */
+img.red {
+  filter: brightness(40%) sepia(100%) hue-rotate(315deg) saturate(400%);
+}
+
+img.green {
+  filter: brightness(40%) sepia(100%) hue-rotate(90deg) saturate(400%);
+}
+
+img.blue {
+  filter: brightness(40%) sepia(100%) hue-rotate(180deg) saturate(400%);
+}
+
 /* Nav Bar */
 nav {
   position: relative;
@@ -171,18 +184,6 @@ div.project {
 div.project img {
   width: 100%;
   border-radius: 8px 8px 0 0;
-}
-
-div.project#weather img{
-  filter: brightness(40%) sepia(100%) hue-rotate(315deg) saturate(400%);
-}
-
-div.project#shoppingCart img{
-  filter: brightness(40%) sepia(100%) hue-rotate(90deg) saturate(400%);
-}
-
-div.project#calculator img{
-  filter: brightness(40%) sepia(100%) hue-rotate(180deg) saturate(400%);
 }
 
 div.project .text {

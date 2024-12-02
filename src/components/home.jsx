@@ -11,7 +11,7 @@ const projects = [
     img: weatherImg,
     title: "Weather App",
     desc: "Weather app project made with HTML/CSS and JavaScript. Makes calls to the Visual Crossing Weather API",
-    id: "weather",
+    color: "red",
   },
   {
     repoLink: "https://github.com/DAlexFunk/Odin-Shopping-Cart",
@@ -19,7 +19,7 @@ const projects = [
     img: shoppingCartImg,
     title: "Shopping Cart",
     desc: "Fake shopping cart app made with ReactJS and makes calls to the Fake Store API",
-    id: "shoppingCart",
+    color: "green",
   },
   {
     repoLink: "https://github.com/DAlexFunk/Odin-Calculator",
@@ -27,7 +27,7 @@ const projects = [
     img: calculatorImg,
     title: "Calculator App",
     desc: "Simple Calculator app made with JavaScript with an interface in HTML/CSS",
-    id: "calculator",
+    color: "blue",
   },
 ];
 
@@ -72,8 +72,8 @@ export default function Home() {
 
 function MiniProject({ project }) {
   return (
-    <div className="project" id={project.id}>
-      <img src={project.img} />
+    <div className="project">
+      <img src={project.img} className={project.color} />
       <div className="text">
         <h3>{project.title}</h3>
         <p>{project.desc}</p>
