@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ActiveLinkContext } from "../App";
 
 export default function Snapshot() {
   const { setActiveLink } = useContext(ActiveLinkContext);
-  setActiveLink("snapshot");
+  useEffect(() => {
+    setActiveLink("snapshot");
+  }, []);
 
   return <p>Snapshot</p>;
 }

@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ActiveLinkContext } from "../App";
 
 export default function Projects() {
   const { setActiveLink } = useContext(ActiveLinkContext);
-  setActiveLink("projects");
+  useEffect(() => {
+    setActiveLink("projects");
+  }, []);
 
   return <p>Projects</p>;
 }
