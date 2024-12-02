@@ -1,9 +1,10 @@
 import { useMeasure } from "@uidotdev/usehooks";
-import { useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ActiveLinkContext } from "../App";
 
 export default function Navbar() {
-  const [activeLink, setActiveLink] = useState("home");
+  const { activeLink, setActiveLink } = useContext(ActiveLinkContext)
   const [selfRef, selfDimensions] = useMeasure();
   const [liRef, liDimensions] = useMeasure();
 
