@@ -28,6 +28,28 @@ img.blue {
   filter: brightness(40%) sepia(100%) hue-rotate(180deg) saturate(400%);
 }
 
+/* Button Backgrounds */
+button.externalLink {
+  background-image: url("./assets/openInNew.svg");
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button.github {
+  background-image: url("./assets/github.svg");
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button.linkedin {
+  background-image: url("./assets/linkedin.svg");
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 /* Nav Bar */
 nav {
   position: relative;
@@ -91,21 +113,10 @@ footer img {
 }
 
 .footerButtons button {
-  background-color: transparent;
   height: 24px;
   width: 24px;
-  border: none;
-  cursor: pointer;
   filter: brightness(0) saturate(100%) invert(100%) sepia(12%) saturate(456%)
     hue-rotate(31deg) brightness(97%) contrast(109%);
-}
-
-.footerButtons .githubButton {
-  background-image: url("./assets/github.svg");
-}
-
-.footerButtons .linkedinButton {
-  background-image: url("./assets/linkedin.svg");
 }
 
 /* Home Page */
@@ -189,12 +200,12 @@ section.introP {
   color: #06ba63;
 }
 
-section.projects {
+main.homePage section.projects {
   display: flex;
   justify-content: center;
 }
 
-div.projectsContainer {
+main.homePage div.projectsContainer {
   background-color: #fdfff7;
   width: 80%;
   padding: 24px;
@@ -208,12 +219,12 @@ div.projectsContainer {
   gap: 24px;
 }
 
-div.projects {
+main.homePage div.projects {
   display: flex;
   justify-content: space-evenly;
 }
 
-div.project {
+main.homePage div.project {
   position: relative;
   max-width: 300px;
   min-height: 425px;
@@ -221,34 +232,23 @@ div.project {
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
 }
 
-div.project img {
+main.homePage div.project img {
   width: 100%;
   border-radius: 8px 8px 0 0;
 }
 
-div.project .text {
+main.homePage div.project .text {
   padding: 5px 10px;
 }
 
-div.project div.buttons {
+main.homePage div.project div.buttons {
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
 
-div.buttons button {
-  background-color: transparent;
+main.homePage .project div.buttons button {
   height: 48px;
   width: 48px;
   margin-left: 8px;
-  border: none;
-  cursor: pointer;
-}
-
-div.project button.repoButton {
-  background-image: url("./assets/github.svg");
-}
-
-div.project button.externalButton {
-  background-image: url("./assets/openInNew.svg");
 }

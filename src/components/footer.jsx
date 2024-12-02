@@ -4,13 +4,13 @@ export default function Footer() {
       <p>Alex Funk - 2024</p>   
       <div className="footerButtons">
         <button
-          className="githubButton"
+          className="github"
           onClick={() => {
             window.open("https://github.com/DAlexFunk");
           }}
         ></button>
         <button
-          className="linkedinButton"
+          className="linkedin"
           onClick={() => {
             window.open("https://www.linkedin.com/in/dalexfunk");
           }}

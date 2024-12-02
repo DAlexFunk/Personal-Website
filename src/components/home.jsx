@@ -80,11 +80,11 @@ function MiniProject({ project }) {
       </div>
       <div className="buttons">
         <button
-          className="repoButton"
+          className="repoButton github"
           onClick={() => window.open(project.repoLink)}
         ></button>
         <button
-          className="externalButton"
+          className="externalButton externalLink"
           onClick={() => window.open(project.externalLink)}
         ></button>
       </div>
