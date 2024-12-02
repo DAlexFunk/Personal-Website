@@ -68,6 +68,46 @@ div.highlight {
   transition: left 350ms;
 }
 
+/* Footer */
+footer {
+  background-color: #6247aa;
+  color: #fdfff7;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+footer img {
+  filter: brightness(0) saturate(100%) invert(58%) sepia(97%) saturate(2576%)
+    hue-rotate(227deg) brightness(88%) contrast(89%);
+}
+
+.footerButtons {
+  display: flex;
+  gap: 16px;
+}
+
+.footerButtons button {
+  background-color: transparent;
+  height: 24px;
+  width: 24px;
+  border: none;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(12%) saturate(456%)
+    hue-rotate(31deg) brightness(97%) contrast(109%);
+}
+
+.footerButtons .githubButton {
+  background-image: url("./assets/github.svg");
+}
+
+.footerButtons .linkedinButton {
+  background-image: url("./assets/linkedin.svg");
+}
+
 /* Home Page */
 main.homePage section.hero {
   padding: 24px;
