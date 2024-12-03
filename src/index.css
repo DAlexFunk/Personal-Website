@@ -311,7 +311,9 @@ main.snapshot div.snapshots {
 }
 
 main.snapshot .snapshots > div {
-  border: 2px solid rebeccapurple;
+  border: 4px solid #6247aa;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
 }
 
 div.snapshot {
@@ -339,8 +341,9 @@ div.snapshot .image {
 
 div.snapshot iframe {
   height: 200px;
-  max-width: 400px;
+  max-width: 432px;
   margin: 0 auto;
+  border-bottom: none;
 }
 
 div.snapshot .video p {
