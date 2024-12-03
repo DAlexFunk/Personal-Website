@@ -253,7 +253,6 @@ main.homePage .project div.buttons button {
   margin-left: 8px;
 }
 
-
 /* Projects Page */
 main.projects div.title {
   padding: 16px;
@@ -261,7 +260,7 @@ main.projects div.title {
 
 main.projects div.projects {
   padding: 16px;
-  
+
   display: grid;
   grid-template: 500px / repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 500px;
@@ -294,4 +293,101 @@ main.projects div.project div.buttons {
 main.projects div.project button {
   height: 48px;
   width: 48px;
+}
+
+
+/* Snapshot */
+main.snapshot {
+  padding: 16px 16px;
+}
+
+main.snapshot div.snapshots {
+  margin-top: 16px;
+  
+  display: grid;
+  grid-template: 400px / repeat(auto-fit, minmax(600px, 1fr));
+  grid-auto-rows: 400px;
+  gap: 64px;
+}
+
+main.snapshot .snapshots > div {
+  border: 2px solid rebeccapurple;
+}
+
+div.snapshot {
+  padding: 12px;
+  font-size: 18px;
+  line-height: 2;
+}
+
+div.content {
+  display: flex;
+  gap: 32px;
+}
+
+div.snapshot p {
+  flex: 1;
+}
+
+div.snapshot .video,
+div.snapshot .image {
+  flex: 1.5;
+
+  display: flex;
+  flex-direction: column;
+}
+
+div.snapshot iframe {
+  height: 200px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+div.snapshot .video p {
+  font-size: 12px;
+  line-height: 1;
+  margin: 0 auto;
+  min-width: 300px;
+  max-height: 24px;
+  padding: 4px 8px;
+  background-color: #a06cd5;
+  font-style: italic;
+  border-radius: 0 0 4px 4px;
+}
+
+div#books p,
+div#books img {
+  height: 300px;
+  width: auto;
+}
+
+div#videoGames .content > p {
+  font-size: 14px;
+}
+
+div#boardGames .content > p {
+  font-size: 16px;
+}
+
+div#boardGames img {
+  width: 50%;
+  height: auto;
+}
+
+div#boardGames img {
+  height: auto;
+  width: clamp(150px, 50%, 200px);
+  margin: 0 auto;
+}
+
+div#boardGames .image p {
+  flex: none;
+  font-size: 12px;
+  line-height: 1;
+  margin: 0 auto;
+  width: clamp(150px, 50%, 200px);
+  padding: 4px 8px;
+  background-color: #a06cd5;
+  font-style: italic;
+  border-radius: 0 0 4px 4px;
 }
