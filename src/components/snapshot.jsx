@@ -58,10 +58,10 @@ export default function Snapshot() {
               I think the best way to relax after a long day is just sitting
               down and playing your favorite game. I usually enjoy most types of
               games, including games that make me as frustrated as possible. One
-              of the ways I enjoy playing games is speedrunning (playing the
-              game as fast as possible) the game. Over my life I have achieved
-              multiple world records in games (most of which have since been
-              beaten).
+              of the ways I enjoy playing games is speedrunning &#40;playing the
+              game as fast as possible&#41; the game. Over my life I have achieved
+              multiple world records in games &#40;most of which have since been
+              beaten&#41;.
             </p>
             <div className="video">
               <iframe
@@ -72,7 +72,7 @@ export default function Snapshot() {
                 referrerpolicy="strict-origin-when-cross-origin"
               ></iframe>
               <p className="subtitle">
-                Watch my latest speedrun (it is a world record!)
+                Watch my latest speedrun &#40;it is a world record!&#41;
               </p>
             </div>
           </div>

@@ -50,6 +50,14 @@ button.linkedin {
   cursor: pointer;
 }
 
+button {
+  transition: transform 100ms;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
 /* Nav Bar */
 nav {
   position: relative;
