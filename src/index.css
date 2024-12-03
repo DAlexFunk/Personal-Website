@@ -8,6 +8,7 @@
 
 html {
   width: 100%;
+  background-color: #fdfff7;
 }
 
 body {
@@ -50,11 +51,12 @@ button.linkedin {
   cursor: pointer;
 }
 
+/* Button Larger on Hover */
 button {
   transition: transform 100ms;
 }
 
-button:hover {
+button:hover:not(main.errorPage button) {
   transform: scale(1.2);
 }
 
@@ -303,7 +305,6 @@ main.projects div.project button {
   width: 48px;
 }
 
-
 /* Snapshot */
 main.snapshot {
   padding: 16px 16px;
@@ -311,7 +312,7 @@ main.snapshot {
 
 main.snapshot div.snapshots {
   margin-top: 16px;
-  
+
   display: grid;
   grid-template: 400px / repeat(auto-fit, minmax(600px, 1fr));
   grid-auto-rows: 400px;
@@ -401,4 +402,31 @@ div#boardGames .image p {
   background-color: #a06cd5;
   font-style: italic;
   border-radius: 0 0 4px 4px;
+}
+
+/* Error Page */
+main.errorPage {
+  height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+main.errorPage * {
+  text-align: center;
+}
+
+main.errorPage img {
+  height: 200px;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(86%) sepia(3%) saturate(405%)
+    hue-rotate(41deg) brightness(94%) contrast(94%);
+}
+
+main.errorPage button {
+  height: 24px;
+  width: 72px;
 }

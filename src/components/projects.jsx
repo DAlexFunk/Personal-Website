@@ -104,7 +104,6 @@ const colors = ["red", "green", "blue"];
 
 export default function Projects() {
   const { setActiveLink } = useContext(ActiveLinkContext);
-
   useEffect(() => {
     setActiveLink("projects");
   }, []);

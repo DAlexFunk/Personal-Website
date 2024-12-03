@@ -1,3 +1,5 @@
+import { useContext, useEffect } from "react";
+import { ActiveLinkContext } from "../App";
 import alexImg from "../assets/alexHero.jpg";
 import arrow from "../assets/curvedArrow.svg";
 import calculatorImg from "../assets/calculator.png";
@@ -32,6 +34,11 @@ const projects = [
 ];
 
 export default function Home() {
+  const { setActiveLink } = useContext(ActiveLinkContext);
+  useEffect(() => {
+    setActiveLink("home");
+  }, []);
+  
   return (
     <main className="homePage">
       <section className="hero">
