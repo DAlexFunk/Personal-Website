@@ -1,4 +1,5 @@
 import { useContext, useEffect } from "react";
+import PropTypes from "prop-types";
 import { ActiveLinkContext } from "../App";
 import weatherImg from "../assets/weather.png";
 import shoppingImg from "../assets/shoppingCart.png";
@@ -44,7 +45,8 @@ const projects = [
   },
   {
     repoLink: "https://github.com/DAlexFunk/Knights-Travails",
-    externalLink: "https://github.com/DAlexFunk/Knights-Travails/blob/main/knightsTravails.mjs",
+    externalLink:
+      "https://github.com/DAlexFunk/Knights-Travails/blob/main/knightsTravails.mjs",
     title: "Knights Travails",
     desc: "A script written in JavaScript to find the shortest path between two different squares on a chessboard by a knight's movement. The script represnents the board as a graph through an adjency list. The script then uses breadth0first search to find the shortest path.",
     img: knightImg,
@@ -58,7 +60,8 @@ const projects = [
   },
   {
     repoLink: "https://github.com/DAlexFunk/Odin-Mini-Message-Board",
-    externalLink: "https://weird-dorree-alex-funk-projects-a0c238cc.koyeb.app/messages",
+    externalLink:
+      "https://weird-dorree-alex-funk-projects-a0c238cc.koyeb.app/messages",
     title: "Message Board",
     desc: "A mini message board where users can see messages and add new messages. This project uses express to run a server where all of the code is stored. The messages are stored in a PotgreSQL database.",
     img: messageBoardImg,
@@ -140,6 +143,21 @@ function Project({ project }) {
   );
 }
 
+Project.propTypes = {
+  project: PropTypes.shape({
+    img: PropTypes.any,
+    title: PropTypes.string,
+    desc: PropTypes.string,
+    repoLink: PropTypes.string,
+    externalLink: PropTypes.string,
+  }),
+};
+
 function Button({ type, href }) {
   return <button className={type} onClick={() => window.open(href)}></button>;
 }
+
+Button.propTypes = {
+  type: PropTypes.string,
+  href: PropTypes.string,
+};

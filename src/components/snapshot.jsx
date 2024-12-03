@@ -41,9 +41,8 @@ export default function Snapshot() {
               <iframe
                 src="https://www.youtube.com/embed/RPN1uB4Va3I?si=VpE3mEdiYk8464My"
                 title="YouTube video player"
-                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"
-                referrerpolicy="strict-origin-when-cross-origin"
+                referrerPolicy="strict-origin-when-cross-origin"
               ></iframe>
               <p className="subtitle">
                 Watch a video of my playing the Marimba!
@@ -67,9 +66,8 @@ export default function Snapshot() {
               <iframe
                 src="https://www.youtube.com/embed/5J_IKUKxAoc?si=9etBFdj-AIY8PtQm"
                 title="YouTube video player"
-                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-                referrerpolicy="strict-origin-when-cross-origin"
+                referrerPolicy="strict-origin-when-cross-origin"
               ></iframe>
               <p className="subtitle">
                 Watch my latest speedrun &#40;it is a world record!&#41;

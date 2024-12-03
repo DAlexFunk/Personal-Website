@@ -16,6 +16,10 @@ body {
   background-color: #fdfff7;
 }
 
+iframe {
+  border: none;
+}
+
 /* Filter Classes for Images */
 img.red {
   filter: brightness(40%) sepia(100%) hue-rotate(315deg) saturate(400%);

@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
 import { ActiveLinkContext } from "../App";
+import PropTypes from "prop-types";
 import alexImg from "../assets/alexHero.jpg";
 import arrow from "../assets/curvedArrow.svg";
 import calculatorImg from "../assets/calculator.png";
@@ -38,7 +39,7 @@ export default function Home() {
   useEffect(() => {
     setActiveLink("home");
   }, []);
-  
+
   return (
     <main className="homePage">
       <section className="hero">
@@ -47,7 +48,7 @@ export default function Home() {
           <p>Creating Clean Code Since 2004 &#40;Not really&#41;</p>
         </div>
         <div className="image">
-          <p className="name">That's Me</p>
+          <p className="name">That&#39;s Me</p>
           <img src={arrow} className="arrow" />
           <img src={alexImg} alt="Alex Funk" className="heroImg" />
         </div>
@@ -98,3 +99,14 @@ function MiniProject({ project }) {
     </div>
   );
 }
+
+MiniProject.propTypes = {
+  project: PropTypes.shape({
+    img: PropTypes.any,
+    color: PropTypes.string,
+    title: PropTypes.string,
+    desc: PropTypes.string,
+    repoLink: PropTypes.string,
+    externalLink: PropTypes.string,
+  }),
+};
