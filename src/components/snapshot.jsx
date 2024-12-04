@@ -64,7 +64,7 @@ export default function Snapshot() {
             </p>
             <div className="video">
               <iframe
-                src="https://www.youtube.com/embed/5J_IKUKxAoc?si=9etBFdj-AIY8PtQm"
+                src="https://www.youtube.com/embed/BGcYI3Vl5dE?si=ATWtkxhUq5gIhGYm"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
                 referrerPolicy="strict-origin-when-cross-origin"
